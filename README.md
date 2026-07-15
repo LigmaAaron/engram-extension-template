@@ -21,6 +21,20 @@ travels with it, so:
   [`template-extension/index.jsx`](template-extension/index.jsx) for the full
   field list with comments.
 
+## info.json (optional)
+
+Drop an `info.json` next to `index.jsx` (and/or at the repo root for the
+library itself) to give the Extensions marketplace a real name/description
+instead of falling back to the folder name/repo URL:
+
+```json
+{ "name": "Template Extension", "description": "What this extension does" }
+```
+
+Both keys are optional and unknown keys are ignored. There's no `creator`
+key — Engram auto-detects that from the repo's commit author, it isn't
+something you set here.
+
 ## Using this template
 
 1. Copy `template-extension/` and rename it to your extension's id.
